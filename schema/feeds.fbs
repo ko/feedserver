@@ -1,0 +1,30 @@
+namespace feeds;
+
+table Image {
+    url:string;
+}
+
+table Item {
+    author:string;
+    description:string;
+    image:Image;
+    guid:string;
+    link:string;
+    subtitle:string;
+    title:string;
+    summary:string;
+    shownotes:string;
+}
+
+table ItunesFeed {
+    author:string;
+    description:string;
+    image:Image;
+    link:string;
+    title:string;
+    subtitle:string;
+    summary:string;
+    items:[Item];
+}
+
+root_type ItunesFeed;
